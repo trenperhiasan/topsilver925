@@ -6,7 +6,7 @@
 <title>Top Silver 925 - Jewellery Maker</title>
 <style>
 body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fff; color:#333; }
-header { text-align:center; padding:40px 10px; }
+header { text-align:center; padding:40px 10px; position:relative; }
 header h1 { font-size:32px; font-weight:600; }
 section { padding:40px 20px; max-width:900px; margin:auto; }
 .gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }
@@ -14,6 +14,14 @@ section { padding:40px 20px; max-width:900px; margin:auto; }
 .button { display:inline-block; margin-top:20px; padding:12px 24px; background:#000; color:#fff; border-radius:4px; text-decoration:none; }
 footer { text-align:center; padding:20px; font-size:14px; color:#777; }
 html { scroll-behavior: smooth; }
+
+.language-switch {
+    position: fixed; top: 15px; right: 15px; z-index: 999;
+}
+.language-switch button {
+    padding:6px 10px; border-radius:6px; border:none; cursor:pointer; margin-left:5px;
+}
+
 .company-profile {
     margin-top:35px;
     background:#fafafa;
@@ -31,50 +39,73 @@ html { scroll-behavior: smooth; }
 </head>
 <body>
 
+<!-- Language Buttons -->
+<div class="language-switch">
+  <button id="idBtn">🇮🇩</button>
+  <button id="enBtn">🇺🇸</button>
+</div>
+
 <header>
     <img src="site.png" alt="Top Silver Logo" style="max-width:120px;">
-    <h1>Top Silver 925</h1>
-    <p>Custom Nama • Cincin Tunangan • Kalung • Gelang • Handmade Artisan</p>
-    <a href="https://wa.me/628132022201" class="button">Chat via WhatsApp</a>
+    <h1 class="lang" data-id="Top Silver 925" data-en="Top Silver 925">Top Silver 925</h1>
+    <p class="lang" data-id="Custom Nama • Cincin Tunangan • Kalung • Gelang • Handmade Artisan"
+       data-en="Custom Name • Engagement Rings • Necklaces • Bracelets • Handmade Artisan">
+       Custom Nama • Cincin Tunangan • Kalung • Gelang • Handmade Artisan
+    </p>
+    <a href="https://wa.me/628132022201" class="button lang" data-id="Chat via WhatsApp" data-en="Chat via WhatsApp">Chat via WhatsApp</a>
 
-    <!-- Company Profile baru ditempel di sini -->
     <div class="company-profile">
-        <h2>Tentang Kami</h2>
-        <p><strong>Top Silver 925</strong> adalah pengrajin perhiasan perak asli yang berlokasi di Bandung sejak 2010 hingga saat ini, dengan spesialisasi pembuatan perhiasan custom seperti cincin, gelang, liontin, dan kalung. Setiap produk dibuat secara handmade dengan detail rapi dan bahan perak 925 (sterling silver) asli.</p>
+        <h2 class="lang" data-id="Tentang Kami" data-en="About Us">Tentang Kami</h2>
 
-        <p>Kami menerima pembuatan desain sesuai permintaan, mulai dari nama, inisial, logo, hingga desain khusus yang memiliki nilai personal bagi pemakai.</p>
+        <p class="lang" data-id="Top Silver 925 adalah pengrajin perhiasan perak asli yang berlokasi di Bandung sejak 2010 hingga saat ini, dengan spesialisasi pembuatan perhiasan custom seperti cincin, gelang, liontin, dan kalung. Setiap produk dibuat secara handmade dengan detail rapi dan bahan perak 925 (sterling silver) asli."
+           data-en="Top Silver 925 is a silver jewelry artisan based in Bandung since 2010, specializing in crafting custom jewelry such as rings, bracelets, pendants, and necklaces. Every piece is handmade with precise craftsmanship using genuine 925 sterling silver.">
+           Top Silver 925 adalah pengrajin perhiasan perak asli...
+        </p>
 
-        <p><strong>Keunggulan:</strong><br>
-        • Bisa custom nama / logo / desain bebas<br>
-        • Bahan perak asli 925 (sterling silver)<br>
-        • Harga langsung pengrajin<br>
-        • Pengerjaan rapi handmade dan presisi</p>
+        <p class="lang" data-id="Kami menerima pembuatan desain sesuai permintaan, mulai dari nama, inisial, logo, hingga desain khusus yang memiliki nilai personal bagi pemakai."
+           data-en="We accept custom design requests, including name jewelry, initials, logos, and personalized pieces with meaningful value for the wearer.">
+           Kami menerima pembuatan desain sesuai permintaan...
+        </p>
+
+        <p class="lang" data-id="• Bisa custom nama / logo / desain bebas<br>• Bahan perak asli 925 (sterling silver)<br>• Harga langsung pengrajin<br>• Pengerjaan rapi handmade dan presisi"
+           data-en="• Custom name / logo / free design<br>• Genuine 925 sterling silver<br>• Direct artisan pricing<br>• Neat and precise handmade work">
+           • Bisa custom nama / logo / desain bebas<br>• Bahan perak asli 925 (sterling silver)<br>• Harga langsung pengrajin<br>• Pengerjaan rapi handmade dan presisi
+        </p>
     </div>
 </header>
 
 <section>
-    <h2>Galeri </h2>
-    <p>view file.</p>
+    <h2 class="lang" data-id="Galeri" data-en="Gallery">Galeri</h2>
+    <p class="lang" data-id="view file." data-en="view file.">view file.</p>
     <div class="gallery">
-        <div>Foto 1</div>
-        <div>Foto 2</div>
-        <div>Foto 3</div>
-        <div>Foto 4</div>
-        <div>Foto 5</div>
-        <div>Foto 6</div>
+        <div class="lang" data-id="Foto 1" data-en="Photo 1">Foto 1</div>
+        <div class="lang" data-id="Foto 2" data-en="Photo 2">Foto 2</div>
+        <div class="lang" data-id="Foto 3" data-en="Photo 3">Foto 3</div>
+        <div class="lang" data-id="Foto 4" data-en="Photo 4">Foto 4</div>
+        <div class="lang" data-id="Foto 5" data-en="Photo 5">Foto 5</div>
+        <div class="lang" data-id="Foto 6" data-en="Photo 6">Foto 6</div>
     </div>
 </section>
 
 <section>
-    <h2>Keunggulan</h2>
+    <h2 class="lang" data-id="Keunggulan" data-en="Advantages">Keunggulan</h2>
     <ul>
-        <li>Perak 925 asli</li>
-        <li>Ukiran detail & halus</li>
-        <li>Bisa request ukuran & model</li>
+        <li class="lang" data-id="Perak 925 asli" data-en="Genuine 925 Silver">Perak 925 asli</li>
+        <li class="lang" data-id="Ukiran detail & halus" data-en="Detailed and Smooth Engraving">Ukiran detail & halus</li>
+        <li class="lang" data-id="Bisa request ukuran & model" data-en="Custom Size & Style Available">Bisa request ukuran & model</li>
     </ul>
 </section>
 
-<footer>© Top Silver 925 - Handmade Jewellery Maker</footer>
+<footer class="lang" data-id="© Top Silver 925 - Handmade Jewellery Maker" data-en="© Top Silver 925 - Handmade Jewellery Maker">© Top Silver 925 - Handmade Jewellery Maker</footer>
+
+<script>
+const idBtn = document.getElementById("idBtn");
+const enBtn = document.getElementById("enBtn");
+const elements = document.querySelectorAll(".lang");
+
+idBtn.onclick = () => { elements.forEach(el => el.innerHTML = el.dataset.id); };
+enBtn.onclick = () => { elements.forEach(el => el.innerHTML = el.dataset.en); };
+</script>
 
 </body>
 </html>
