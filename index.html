@@ -178,7 +178,105 @@ document.getElementById("ai-assistant-btn").onclick = function(){
     var box = document.getElementById("ai-assistant-box");
     box.style.display = (box.style.display === "none" || box.style.display === "") ? "block" : "none";
 };
+<!-- AI Assistant Floating Button -->
+<style>
+#ai-assistant-btn {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    background: #000;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.35);
+    transition: 0.2s;
+}
+#ai-assistant-btn:hover {
+    transform: scale(1.06);
+}
 
+#ai-assistant-box {
+    position: fixed;
+    bottom: 75px;
+    left: 15px;
+    width: 300px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.25);
+    display: none;
+    z-index: 9999;
+    font-size: 14px;
+    line-height: 1.5;
+}
+#ai-assistant-box button {
+    width: 100%;
+    background: #000;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#ai-assistant-box button:hover {
+    opacity: 0.85;
+}
+
+/* Desktop: tombol AI di kiri atas */
+@media (min-width: 601px) {
+  #ai-assistant-btn {
+    top: 15px;
+    bottom: auto;
+  }
+  #ai-assistant-box {
+    bottom: auto;
+    top: 75px;
+  }
+}
+</style>
+
+<div id="ai-assistant-btn">AI 🤖</div>
+
+<div id="ai-assistant-box">
+    <p><b>Bisa saya bantu? 😊</b></p>
+    <button onclick="sendAI('ring')">Cara Mengukur Ukuran Cincin</button>
+    <button onclick="sendAI('bracelet')">Cara Mengukur Ukuran Gelang</button>
+    <button onclick="sendAI('shipping')">Info Ongkir & Pengiriman</button>
+    <button onclick="sendAI('custom')">Tanya Custom Desain</button>
+</div>
+
+<script>
+document.getElementById("ai-assistant-btn").onclick = function(){
+    const box = document.getElementById("ai-assistant-box");
+    box.style.display = (box.style.display === "none" || box.style.display === "") ? "block" : "none";
+};
+
+function sendAI(topic){
+    let msg = "";
+
+    switch(topic){
+      case "ring":
+        msg = "Halo! Saya ingin konsultasi cara mengukur ukuran cincin.";
+        break;
+      case "bracelet":
+        msg = "Halo! Saya ingin tanya cara menentukan ukuran gelang.";
+        break;
+      case "shipping":
+        msg = "Halo! Saya ingin tanya ongkir.\nDomestik: JNE / J&T (10rb – 30rb)\nLuar Negeri: DHL / EMS (200rb – 550rb)";
+        break;
+      case "custom":
+        msg = "Halo! Saya ingin konsultasi custom desain.";
+        break;
+    }
+
+    window.open("https://wa.me/628132022201?text=" + encodeURIComponent(msg), "_blank");
+}
+</script>
 function sendAI(topik){
     let message = '';
 
