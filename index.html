@@ -200,7 +200,17 @@ document.getElementById("id-btn").onclick = function() {
 
   <button onclick="window.open('https://cekongkir.com','_blank')">
     Cek Ongkir Dalam & Luar Negeri
-  </button>
+    <script>
+document.getElementById("ai-help-btn").onclick = function() {
+  const box = document.getElementById("ai-help-box");
+  if (box.style.display === "none" || box.style.display === "") {
+      box.style.display = "block";
+  } else {
+      box.style.display = "none";
+  }
+};
+    </script>
+</button>
 </div>
 </body>
 </html>
