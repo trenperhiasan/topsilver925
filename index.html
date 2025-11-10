@@ -292,6 +292,16 @@ function sendAI(topik){
 
     window.open("https://wa.me/628132022201?text=" + encodeURIComponent(message), "_blank");
 }
+</script><script>
+document.addEventListener("DOMContentLoaded", function() {
+  const waButtons = document.querySelectorAll(".wa-button");
+  waButtons.forEach(btn => {
+    btn.addEventListener("click", function() {
+      const message = encodeURIComponent("Halo, saya ingin tanya tentang perhiasan Top Silver 925.");
+      window.open("https://wa.me/628132022201?text=" + message, "_blank");
+    });
+  });
+});
 </script>
 </body>
 </html>
