@@ -1,123 +1,136 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Top Silver 925</title>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Top Silver 925 - Handmade Jewellery Maker</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    background: #fff;
-    color: #333;
-}
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fff; color:#333; }
+header { text-align:center; padding:40px 10px; }
+header h1 { font-size:32px; font-weight:600; margin-top:10px; }
+section { padding:40px 20px; max-width:900px; margin:auto; }
 
-/* Logo */
-header img {
-    width: 160px;
-    margin-top: 20px;
-}
+.button { display:inline-block; margin-top:20px; padding:12px 24px; background:#000; color:#fff; border-radius:4px; text-decoration:none; }
 
-/* Section Block */
-section {
-    padding: 30px 20px;
-}
+.gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }
+.gallery div { background:#eee; height:140px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#777; }
 
-/* WhatsApp Button */
-.whatsapp-btn {
-    display: inline-block;
-    background: #000;
-    color: #fff;
-    padding: 14px 26px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 18px;
-    margin: 20px 0;
-}
+footer { text-align:center; padding:25px; font-size:14px; color:#777; background:#fafafa; margin-top:40px; }
 
-/* Card (Tentang Kami) */
-.card {
-    background: #f8f8f8;
-    padding: 30px;
-    border-radius: 12px;
-    width: 90%;
-    margin: auto;
-    max-width: 800px;
-    line-height: 1.7;
-}
+/* Bahasa */
+.language-switch { position: fixed; top: 12px; right: 12px; z-index:999; }
+.language-switch button { padding:6px 10px; border-radius:6px; border:none; cursor:pointer; background:#eee; }
 
-/* Galeri Grid */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    padding: 20px;
+/* AI Assistant Bubble */
+#ai-btn {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  background:#000;
+  color:#fff;
+  padding:10px 14px;
+  border-radius:50px;
+  cursor:pointer;
+  z-index:9999;
+  box-shadow:0 4px 12px rgba(0,0,0,0.35);
 }
-.gallery div {
-    background: #eee;
-    padding: 35px 0;
-    border-radius: 10px;
-    font-size: 16px;
-    color: #666;
+#ai-box {
+  position: fixed;
+  top:75px;
+  left:18px;
+  width:290px;
+  background:#fff;
+  border-radius:14px;
+  padding:14px;
+  display:none;
+  box-shadow:0 5px 20px rgba(0,0,0,0.25);
 }
-
-/* Keunggulan List */
-ul {
-    text-align: left;
-    max-width: 600px;
-    margin: auto;
+#ai-box button {
+  width:100%;
+  background:#000;
+  color:#fff;
+  border:none;
+  padding:9px;
+  border-radius:6px;
+  margin-top:8px;
+  cursor:pointer;
 }
 </style>
 </head>
 <body>
 
+<!-- Bahasa -->
+<div class="language-switch">
+  <button id="idBtn">🇮🇩</button>
+  <button id="enBtn">🇺🇸</button>
+</div>
+
 <header>
-    <img src="site.png" alt="Top Silver Logo">
+  <img src="site.png" alt="Top Silver 925" style="max-width:120px;">
+  <h1 class="lang" data-id="Top Silver 925" data-en="Top Silver 925">Top Silver 925</h1>
+  <p class="lang"
+     data-id="Custom Nama • Cincin Tunangan • Kalung • Gelang"
+     data-en="Custom Name • Engagement Rings • Necklaces • Bracelets">
+     Custom Nama • Cincin Tunangan • Kalung • Gelang
+  </p>
+
+  <a href="https://wa.me/628132022201" class="button lang"
+     data-id="Chat via WhatsApp" data-en="Chat via WhatsApp">Chat via WhatsApp</a>
+
+  <p class="lang" style="margin-top:28px; font-size:15px; line-height:1.6;"
+     data-id="Top Silver adalah pengrajin perhiasan perak sejak 2010. Kami menyediakan cincin, gelang, liontin, dan kalung custom menggunakan perak murni 925."
+     data-en="Top Silver is a handcrafted jewelry maker established in 2010. We craft custom rings, bracelets, pendants and necklaces using genuine 925 sterling silver.">
+     Top Silver adalah pengrajin perhiasan...
+  </p>
 </header>
 
-<h1>Top Silver 925</h1>
-<p>Custom Nama • Cincin Tunangan • Kalung • Gelang • Handmade Artisan</p>
-
-<a class="whatsapp-btn" href="https://wa.me/628132022201?text=Halo%20Top%20Silver%2C%20saya%20ingin%20bertanya%20perhiasan.">
-    Chat via WhatsApp
-</a>
-
 <section>
-    <div class="card">
-        <h2>Tentang Kami</h2>
-        <p><b>Top Silver 925</b> adalah pengrajin perhiasan perak asli yang berlokasi di Bandung sejak 2010 hingga saat ini, dengan spesialisasi pembuatan perhiasan custom seperti cincin, gelang, liontin, dan kalung. Setiap produk dibuat secara handmade dengan detail rapi dan bahan perak 925 (sterling silver) asli.</p>
-
-        <p>Kami menerima pembuatan desain sesuai permintaan, mulai dari nama, inisial, logo, hingga desain khusus yang memiliki nilai personal bagi pemakai.</p>
-    </div>
+  <h2 class="lang" data-id="Galeri" data-en="Gallery">Galeri</h2>
+  <div class="gallery">
+     <div>Foto 1</div><div>Foto 2</div><div>Foto 3</div>
+     <div>Foto 4</div><div>Foto 5</div><div>Foto 6</div>
+  </div>
 </section>
 
-<section>
-    <h2>Galeri Produk</h2>
-    <p>Upload foto produk nanti secara manual.</p>
+<footer class="lang"
+ data-id="© Top Silver 925 - Handmade Jewellery Maker"
+ data-en="© Top Silver 925 - Handmade Jewellery Maker">
+ © Top Silver 925 - Handmade Jewellery Maker
+</footer>
 
-    <div class="gallery">
-        <div>Foto 1</div>
-        <div>Foto 2</div>
-        <div>Foto 3</div>
-        <div>Foto 4</div>
-        <div>Foto 5</div>
-        <div>Foto 6</div>
-    </div>
-</section>
+<script>
+// Bahasa
+const e=document.querySelectorAll(".lang");
+idBtn.onclick=()=>e.forEach(x=>x.innerHTML=x.dataset.id);
+enBtn.onclick=()=>e.forEach(x=>x.innerHTML=x.dataset.en);
+</script>
 
-<section>
-    <h2>Keunggulan</h2>
-    <ul>
-        <li>Perak 925 asli</li>
-        <li>Ukiran detail & halus</li>
-        <li>Bisa request ukuran & model</li>
-    </ul>
-</section>
+<!-- AI -->
+<div id="ai-btn">AI 🤖</div>
+<div id="ai-box">
+ <p><b>Bisa saya bantu?</b></p>
+ <button onclick="ask('ring')">Cara ukur cincin</button>
+ <button onclick="ask('bracelet')">Cara ukur gelang</button>
+ <button onclick="ask('ship')">Info ongkir</button>
+ <button onclick="ask('custom')">Custom desain</button>
+</div>
+
+<script>
+document.getElementById("ai-btn").onclick=()=> {
+  const b=document.getElementById("ai-box");
+  b.style.display=b.style.display==="block"?"none":"block";
+};
+function ask(t){
+ const m={
+   ring:"Halo, saya ingin tanya cara mengukur ukuran cincin 😊",
+   bracelet:"Halo, saya ingin tanya ukuran gelang 😊",
+   ship:"Halo, saya ingin tanya ongkir dan ekspedisi 📦",
+   custom:"Halo, saya ingin konsultasi custom desain ✨"
+ };
+ window.open("https://wa.me/628132022201?text="+encodeURIComponent(m[t]),"_blank");
+}
+</script>
 
 </body>
 </html>
