@@ -3,133 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Top Silver 925 - Handmade Jewellery Maker</title>
-
+<title>Top Silver 925</title>
 <style>
-body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fff; color:#333; }
-header { text-align:center; padding:40px 10px; }
-header h1 { font-size:32px; font-weight:600; margin-top:10px; }
-section { padding:40px 20px; max-width:900px; margin:auto; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; color: #222; }
+    header img { width: 180px; margin-top: 20px; }
+    .button { display: inline-block; background: black; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; margin-top: 10px; }
+    section { padding: 35px 20px; text-align: center; }
 
-.button { display:inline-block; margin-top:20px; padding:12px 24px; background:#000; color:#fff; border-radius:4px; text-decoration:none; }
+    .language-switch button { padding: 6px 14px; margin: 4px; border-radius: 6px; border: 1px solid #ccc; }
 
-.gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }
-.gallery div { background:#eee; height:140px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#777; }
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; padding: 20px; }
+    .gallery div { background: #eee; padding: 35px 0; border-radius: 10px; color: #777; font-size: 14px; }
 
-footer { text-align:center; padding:25px; font-size:14px; color:#777; background:#fafafa; margin-top:40px; }
+    /* Chat Bubble */
+    #chatBubble {
+      position: fixed; bottom: 25px; right: 25px;
+      background: #000; color: #fff; border-radius: 50%;
+      width: 55px; height: 55px; display: flex; align-items: center;
+      justify-content: center; font-size: 26px; cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    }
+    #chatBox {
+      position: fixed; bottom: 90px; right: 25px; width: 260px;
+      background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      padding: 12px; display: none; text-align: left;
+    }
+    #chatBox textarea { width: 100%; height: 60px; border-radius: 6px; padding: 6px; border: 1px solid #ccc; }
+    #chatBox button { margin-top: 6px; width: 100%; padding: 8px; background: black; color: white; border: none; border-radius: 6px; }
 
-/* Bahasa */
-.language-switch { position: fixed; top: 12px; right: 12px; z-index:999; }
-.language-switch button { padding:6px 10px; border-radius:6px; border:none; cursor:pointer; background:#eee; }
-
-/* AI Assistant Bubble */
-#ai-btn {
-  position: fixed;
-  top: 18px;
-  left: 18px;
-  background:#000;
-  color:#fff;
-  padding:10px 14px;
-  border-radius:50px;
-  cursor:pointer;
-  z-index:9999;
-  box-shadow:0 4px 12px rgba(0,0,0,0.35);
-}
-#ai-box {
-  position: fixed;
-  top:75px;
-  left:18px;
-  width:290px;
-  background:#fff;
-  border-radius:14px;
-  padding:14px;
-  display:none;
-  box-shadow:0 5px 20px rgba(0,0,0,0.25);
-}
-#ai-box button {
-  width:100%;
-  background:#000;
-  color:#fff;
-  border:none;
-  padding:9px;
-  border-radius:6px;
-  margin-top:8px;
-  cursor:pointer;
-}
 </style>
 </head>
 <body>
 
-<!-- Bahasa -->
-<div class="language-switch">
-  <button id="idBtn">🇮🇩</button>
-  <button id="enBtn">🇺🇸</button>
-</div>
-
 <header>
-  <img src="site.png" alt="Top Silver 925" style="max-width:120px;">
-  <h1 class="lang" data-id="Top Silver 925" data-en="Top Silver 925">Top Silver 925</h1>
-  <p class="lang"
-     data-id="Custom Nama • Cincin Tunangan • Kalung • Gelang"
-     data-en="Custom Name • Engagement Rings • Necklaces • Bracelets">
-     Custom Nama • Cincin Tunangan • Kalung • Gelang
-  </p>
-
-  <a href="https://wa.me/628132022201" class="button lang"
-     data-id="Chat via WhatsApp" data-en="Chat via WhatsApp">Chat via WhatsApp</a>
-
-  <p class="lang" style="margin-top:28px; font-size:15px; line-height:1.6;"
-     data-id="Top Silver adalah pengrajin perhiasan perak sejak 2010. Kami menyediakan cincin, gelang, liontin, dan kalung custom menggunakan perak murni 925."
-     data-en="Top Silver is a handcrafted jewelry maker established in 2010. We craft custom rings, bracelets, pendants and necklaces using genuine 925 sterling silver.">
-     Top Silver adalah pengrajin perhiasan...
-  </p>
+    <img src="site.png" alt="Top Silver Logo">
+    <h1 class="lang" data-id="Top Silver 925" data-en="Top Silver 925">Top Silver 925</h1>
+    <p class="lang" data-id="Custom Nama • Cincin Tunangan • Kalung • Gelang • Handmade Artisan"
+       data-en="Custom Name • Engagement Rings • Necklaces • Bracelets • Handmade Artisan">
+       Custom Nama • Cincin Tunangan • Kalung • Gelang • Handmade Artisan
+    </p>
 </header>
 
+<a href="https://wa.me/628132022201" class="button lang"
+   data-id="Chat via WhatsApp" data-en="Chat via WhatsApp">
+   Chat via WhatsApp
+</a>
+
+<div class="language-switch">
+    <button id="idBtn">🇮🇩 ID</button>
+    <button id="enBtn">🇺🇸 EN</button>
+</div>
+
 <section>
-  <h2 class="lang" data-id="Galeri" data-en="Gallery">Galeri</h2>
-  <div class="gallery">
-     <div>Foto 1</div><div>Foto 2</div><div>Foto 3</div>
-     <div>Foto 4</div><div>Foto 5</div><div>Foto 6</div>
-  </div>
+<h2 class="lang" data-id="Tentang Kami" data-en="About Us">Tentang Kami</h2>
+<p class="lang"
+   data-id="Top Silver 925 adalah pengrajin perhiasan perak asli di Bandung sejak 2010, spesialis cincin, gelang, kalung dan liontin custom dengan detail handmade."
+   data-en="Top Silver 925 is a sterling silver jewelry artisan based in Bandung since 2010, specializing in handcrafted custom rings, bracelets, necklaces, and pendants.">
+   Top Silver 925 adalah pengrajin perhiasan perak asli di Bandung sejak 2010...
+</p>
 </section>
 
-<footer class="lang"
- data-id="© Top Silver 925 - Handmade Jewellery Maker"
- data-en="© Top Silver 925 - Handmade Jewellery Maker">
- © Top Silver 925 - Handmade Jewellery Maker
-</footer>
+<section>
+<h2 class="lang" data-id="Galeri Produk" data-en="Product Gallery">Galeri Produk</h2>
+<p class="lang" data-id="Upload foto produk nanti secara manual." data-en="Product photos will be uploaded later manually.">Upload foto produk nanti secara manual.</p>
 
-<script>
-// Bahasa
-const e=document.querySelectorAll(".lang");
-idBtn.onclick=()=>e.forEach(x=>x.innerHTML=x.dataset.id);
-enBtn.onclick=()=>e.forEach(x=>x.innerHTML=x.dataset.en);
-</script>
+<div class="gallery">
+  <div>Foto 1</div><div>Foto 2</div><div>Foto 3</div>
+  <div>Foto 4</div><div>Foto 5</div><div>Foto 6</div>
+</div>
+</section>
 
-<!-- AI -->
-<div id="ai-btn">AI 🤖</div>
-<div id="ai-box">
- <p><b>Bisa saya bantu?</b></p>
- <button onclick="ask('ring')">Cara ukur cincin</button>
- <button onclick="ask('bracelet')">Cara ukur gelang</button>
- <button onclick="ask('ship')">Info ongkir</button>
- <button onclick="ask('custom')">Custom desain</button>
+<section>
+<h2 class="lang" data-id="Keunggulan" data-en="Advantages">Keunggulan</h2>
+<ul style="display:inline-block; text-align:left;">
+<li class="lang" data-id="Perak 925 asli" data-en="Sterling Silver 925">Perak 925 asli</li>
+<li class="lang" data-id="Ukiran detail & halus" data-en="Fine & detailed engraving">Ukiran detail & halus</li>
+<li class="lang" data-id="Bisa request ukuran & model" data-en="Custom size & design available">Bisa request ukuran & model</li>
+</ul>
+</section>
+
+<!-- AI Chat Bubble -->
+<div id="chatBubble">💬</div>
+<div id="chatBox">
+  <p><b>AI Assistant</b></p>
+  <textarea placeholder="Tanya ukuran cincin / ongkir..."></textarea>
+  <button>Kirim</button>
 </div>
 
 <script>
-document.getElementById("ai-btn").onclick=()=> {
-  const b=document.getElementById("ai-box");
-  b.style.display=b.style.display==="block"?"none":"block";
-};
-function ask(t){
- const m={
-   ring:"Halo, saya ingin tanya cara mengukur ukuran cincin 😊",
-   bracelet:"Halo, saya ingin tanya ukuran gelang 😊",
-   ship:"Halo, saya ingin tanya ongkir dan ekspedisi 📦",
-   custom:"Halo, saya ingin konsultasi custom desain ✨"
- };
- window.open("https://wa.me/628132022201?text="+encodeURIComponent(m[t]),"_blank");
+document.getElementById("chatBubble").onclick = () =>
+  document.getElementById("chatBox").style.display =
+  document.getElementById("chatBox").style.display === "block" ? "none" : "block";
+
+const idBtn = document.getElementById("idBtn");
+const enBtn = document.getElementById("enBtn");
+
+function setLanguage(lang) {
+  document.querySelectorAll('.lang').forEach(el =>
+    el.textContent = el.getAttribute(`data-${lang}`));
+  localStorage.setItem("site-lang", lang);
 }
+
+idBtn.onclick = () => setLanguage("id");
+enBtn.onclick = () => setLanguage("en");
+
+setLanguage(localStorage.getItem("site-lang") || "id");
 </script>
 
 </body>
