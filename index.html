@@ -19,7 +19,7 @@ html { scroll-behavior: smooth; }
     position: fixed; top: 15px; right: 15px; z-index: 999;
 }
 .language-switch button {
-    padding:6px 10px; border-radius:6px; border:none; cursor:pointer; margin-left:5px;
+    padding:6px 10px; border-radius:6px; border:none; cursor:pointer; margin-left:5px; background:#eee;
 }
 
 .company-profile {
@@ -39,7 +39,7 @@ html { scroll-behavior: smooth; }
 </head>
 <body>
 
-<!-- Language Buttons -->
+<!-- Language Switch -->
 <div class="language-switch">
   <button id="idBtn">🇮🇩</button>
   <button id="enBtn">🇺🇸</button>
@@ -48,7 +48,8 @@ html { scroll-behavior: smooth; }
 <header>
     <img src="site.png" alt="Top Silver Logo" style="max-width:120px;">
     <h1 class="lang" data-id="Top Silver 925" data-en="Top Silver 925">Top Silver 925</h1>
-    <p class="lang" data-id="Custom Nama • Cincin Tunangan • Kalung • Gelang • Handmade Artisan"
+    <p class="lang"
+       data-id="Custom Nama • Cincin Tunangan • Kalung • Gelang • Handmade Artisan"
        data-en="Custom Name • Engagement Rings • Necklaces • Bracelets • Handmade Artisan">
        Custom Nama • Cincin Tunangan • Kalung • Gelang • Handmade Artisan
     </p>
@@ -62,12 +63,14 @@ html { scroll-behavior: smooth; }
            Top Silver 925 adalah pengrajin perhiasan perak asli...
         </p>
 
-        <p class="lang" data-id="Kami menerima pembuatan desain sesuai permintaan, mulai dari nama, inisial, logo, hingga desain khusus yang memiliki nilai personal bagi pemakai."
+        <p class="lang"
+           data-id="Kami menerima pembuatan desain sesuai permintaan, mulai dari nama, inisial, logo, hingga desain khusus yang memiliki nilai personal bagi pemakai."
            data-en="We accept custom design requests, including name jewelry, initials, logos, and personalized pieces with meaningful value for the wearer.">
            Kami menerima pembuatan desain sesuai permintaan...
         </p>
 
-        <p class="lang" data-id="• Bisa custom nama / logo / desain bebas<br>• Bahan perak asli 925 (sterling silver)<br>• Harga langsung pengrajin<br>• Pengerjaan rapi handmade dan presisi"
+        <p class="lang"
+           data-id="• Bisa custom nama / logo / desain bebas<br>• Bahan perak asli 925 (sterling silver)<br>• Harga langsung pengrajin<br>• Pengerjaan rapi handmade dan presisi"
            data-en="• Custom name / logo / free design<br>• Genuine 925 sterling silver<br>• Direct artisan pricing<br>• Neat and precise handmade work">
            • Bisa custom nama / logo / desain bebas<br>• Bahan perak asli 925 (sterling silver)<br>• Harga langsung pengrajin<br>• Pengerjaan rapi handmade dan presisi
         </p>
@@ -96,15 +99,25 @@ html { scroll-behavior: smooth; }
     </ul>
 </section>
 
-<footer class="lang" data-id="© Top Silver 925 - Handmade Jewellery Maker" data-en="© Top Silver 925 - Handmade Jewellery Maker">© Top Silver 925 - Handmade Jewellery Maker</footer>
+<footer class="lang"
+ data-id="© Top Silver 925 - Handmade Jewellery Maker"
+ data-en="© Top Silver 925 - Handmade Jewellery Maker">
+ © Top Silver 925 - Handmade Jewellery Maker
+</footer>
 
 <script>
 const idBtn = document.getElementById("idBtn");
 const enBtn = document.getElementById("enBtn");
 const elements = document.querySelectorAll(".lang");
 
-idBtn.onclick = () => { elements.forEach(el => el.innerHTML = el.dataset.id); };
-enBtn.onclick = () => { elements.forEach(el => el.innerHTML = el.dataset.en); };
+function switchLang(lang) {
+  elements.forEach(el => {
+    el.innerHTML = el.dataset[lang];
+  });
+}
+
+idBtn.onclick = () => switchLang("id");
+enBtn.onclick = () => switchLang("en");
 </script>
 
 </body>
