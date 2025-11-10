@@ -119,6 +119,81 @@ function switchLang(lang) {
 idBtn.onclick = () => switchLang("id");
 enBtn.onclick = () => switchLang("en");
 </script>
+<!-- AI Assistant Button -->
+<style>
+#ai-assistant-btn {
+    position: fixed;
+    top: 12px;
+    left: 12px; /* KIRI ATAS */
+    background: #000;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.3);
+}
+#ai-assistant-box {
+    position: fixed;
+    bottom: 80px;
+    left: 12px;
+    width: 300px;
+    max-height: 420px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+    display: none;
+    z-index: 9999;
+    overflow-y: auto;
+    font-size: 14px;
+}
+#ai-assistant-box button {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+</style>
 
+<div id="ai-assistant-btn">AI 🤖</div>
+
+<div id="ai-assistant-box">
+    <p><b>Halo! Ada yang ingin ditanyakan?</b></p>
+    <p>Pilih salah satu:</p>
+
+    <button onclick="sendAI('ukuran cincin')">Cara Mengukur Ukuran Cincin</button>
+    <button onclick="sendAI('ukuran gelang')">Cara Mengukur Ukuran Gelang</button>
+    <button onclick="sendAI('ongkir')">Info Pengiriman & Ongkir</button>
+    <button onclick="sendAI('custom desain')">Tanya Custom Desain</button>
+</div>
+
+<script>
+document.getElementById("ai-assistant-btn").onclick = function(){
+    var box = document.getElementById("ai-assistant-box");
+    box.style.display = (box.style.display === "none" || box.style.display === "") ? "block" : "none";
+};
+
+function sendAI(topik){
+    let message = '';
+
+    if(topik === 'ukuran cincin'){
+        message = 'Halo! Saya ingin konsultasi ukuran cincin. Cara hitung ukuran jari.';
+    } else if(topik === 'ukuran gelang'){
+        message = 'Halo! Saya ingin tanya cara menentukan ukuran gelang.';
+    } else if(topik === 'ongkir'){
+        message = 'Halo! Saya ingin tanya estimasi ongkir. Domestik JNE/J&T 10rb-30rb. Luar negeri DHL/EMS 200rb-550rb.';
+    } else if(topik === 'custom desain'){
+        message = 'Halo! Saya ingin konsultasi custom desain perhiasan.';
+    }
+
+    window.open("https://wa.me/628132022201?text=" + encodeURIComponent(message), "_blank");
+}
+</script>
 </body>
 </html>
