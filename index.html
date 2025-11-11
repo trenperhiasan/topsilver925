@@ -2,24 +2,6 @@
 <html lang="id">
 <head>
   ...
-  <style>
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 16px;
-      justify-items: center;
-      align-items: center;
-      padding: 10px 0;
-    }
-
-    .gallery video {
-      width: 170px;
-      height: 170px;
-      object-fit: cover;
-      border-radius: 12px;
-      background: #f1f1f1;
-    }
-  </style>
 </head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -238,6 +220,23 @@ document.getElementById("id-btn").onclick = function() {
   location.reload();
 };
 </script>
+<style>
+.gallery {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)) !important;
+  gap: 16px !important;
+  justify-items: center !important;
+  align-items: center !important;
+  padding: 10px 0 !important;
+}
 
+.gallery video {
+  width: 170px !important;
+  height: 170px !important;
+  object-fit: cover !important;
+  border-radius: 12px !important;
+  background: #f1f1f1 !important;
+}
+</style>
 </body>
 </html>
