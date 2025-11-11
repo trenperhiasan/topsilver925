@@ -3,167 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Top Silver 925</title>
+<title>Panduan Ukuran • Top Silver 925</title>
 
 <style>
-.language-switch {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.language-switch button {
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 6px 8px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-left: 4px;
-}
-
-.language-switch button:hover {
-  background: #eee;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 16px;
-  justify-items: center;
-  align-items: center;
-  padding: 10px 0;
-}
-
-.gallery video {
-  width: 170px;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 12px;
-  background: #f1f1f1;
-}
-
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
-  color: #222;
+  padding: 15px;
   text-align: center;
 }
 
-header {
-  background: #ffffff;
-  padding: 25px 10px;
+button {
+  display: block;
+  margin: 12px auto;
+  padding: 10px 16px;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
 }
 
-header img {
-  max-width: 130px;
+/* POPUP */
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#popup-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+#close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
 }
 </style>
 </head>
+
 <body>
 
-<header>
-  <div class="language-switch">
-    <button onclick="setLanguage('id')">🇮🇩</button>
-    <button onclick="setLanguage('en')">🇺🇸</button>
+<h2>Panduan Ukuran Perhiasan</h2>
+<p>Gunakan kawat / kabel tembaga untuk membuat bentuk lingkar, lalu ukur dengan penggaris.</p>
+
+<button onclick="openPopup('cincin')">Cara Mengukur Cincin 💍</button>
+<button onclick="openPopup('gelang')">Cara Mengukur Gelang 🔗</button>
+<button onclick="openPopup('kalung')">Cara Mengukur Kalung 📿</button>
+<button onclick="openPopup('anting')">Cara Memilih Ukuran Anting 🟣</button>
+
+<br>
+<a href="index.html" style="color:#000;text-decoration:none;">⬅ Kembali ke Beranda</a>
+
+<!-- POPUP -->
+<div id="popup">
+  <div id="popup-box">
+    <span id="close" onclick="closePopup()">×</span>
+    <p id="popup-text"></p>
   </div>
-
-  <img src="site.png" alt="Top Silver Logo">
-  <h1 data-lang="title">Top Silver 925</h1>
-  <p data-lang="tagline">Custom Nama • Cincin • Gelang • Liontin • Anting</p>
-
-  <a data-lang="chatbtn" href="https://wa.me/628132022201?t=Halo%2C%20saya%20ingin%20pesan%20custom%20perhiasan" 
-     style="display:inline-block;margin-top:10px;padding:10px 18px;background:black;color:white;border-radius:6px;text-decoration:none;">
-        Chat WhatsApp
-  </a>
-</header>
-
-<section>
-  <h2 data-lang="about">Tentang Kami</h2>
-  <p data-lang="aboutdesc">Top Silver 925 adalah pengrajin perhiasan perak murni dengan kualitas premium dan pengerjaan detail rapi.</p>
-
-  <ul style="text-align:left;max-width:600px;margin:auto;line-height:1.6;">
-      <li data-lang="p1">Bisa custom nama / model sesuai keinginan</li>
-      <li data-lang="p2">Bahan perak asli 925 (bukan lapisan)</li>
-      <li data-lang="p3">Harga langsung pengrajin</li>
-      <li data-lang="p4">Pengerjaan rapi & finishing halus</li>
-  </ul>
-</section>
-
-<section>
-  <h2 data-lang="gallery">Galeri Produk</h2>
-  <p data-lang="gallerydesc">Koleksi hasil pengerjaan Top Silver 925</p>
-
-  <div class="gallery">
-      <video controls autoplay loop muted><source src="video1.mp4" type="video/mp4"></video>
-      <video controls autoplay loop muted><source src="video2.mp4" type="video/mp4"></video>
-      <video controls autoplay loop muted><source src="Video4.mp4" type="video/mp4"></video>
-  </div>
-</section>
-
-<section>
-  <h2 data-lang="adv">Keunggulan Kami</h2>
-  <ul style="text-align:left;max-width:600px;margin:auto;line-height:1.6;">
-      <li data-lang="a1">Desain bebas – kirim foto bisa dibuat</li>
-      <li data-lang="a2">Perak dijamin asli 925</li>
-      <li data-lang="a3">Harga langsung tanpa perantara</li>
-      <li data-lang="a4">Garansi perbaikan finishing</li>
-  </ul>
-</section>
-
-<footer style="padding:20px;background:#f1f1f1;margin-top:35px;">
-  <p data-lang="footer">Top Silver 925 • Pengrajin Perhiasan Custom</p>
-</footer>
+</div>
 
 <script>
-const langText = {
-  id: {
-    title: "Top Silver 925",
-    tagline: "Custom Nama • Cincin • Gelang • Liontin • Anting",
-    chatbtn: "Chat WhatsApp & konsultasi design",
-    about: "Tentang Kami",
-    aboutdesc: "Top Silver 925 adalah pengrajin perhiasan perak murni dengan kualitas premium dan pengerjaan detail rapi.",
-    p1: "Bisa custom nama / model sesuai keinginan",
-    p2: "Bahan perak asli 925 (bukan lapisan)",
-    p3: "Harga langsung pengrajin",
-    p4: "Pengerjaan rapi & finishing halus",
-    gallery: "Galeri Produk",
-    gallerydesc: "Koleksi hasil pengerjaan Top Silver 925",
-    adv: "Keunggulan Kami",
-    a1: "Desain bebas – kirim foto bisa dibuat",
-    a2: "Perak dijamin asli 925",
-    a3: "Harga tanpa perantara",
-    a4: "Garansi perbaikan finishing",
-    footer: "Top Silver 925, Bandung,jawa barat"
-  },
+function openPopup(type) {
+  let text = {
+    cincin: "Gunakan cincin yang sudah pas → ukur diameter bagian dalam (kiri ke kanan). Atau buat lingkar dari kawat sesuai jari lalu ukur diameternya.",
+    gelang: "Buat lingkar dari kawat sesuai pergelangan. Ukur diameter kiri-kanan & atas-bawah, pilih ukuran terdekat.",
+    kalung: "Kalung diukur panjang totalnya dari ujung ke ujung dengan penggaris / pita ukur.",
+    anting: "Pilih diameter anting sesuai kenyamanan. Diameter besar = tampilan longgar, diameter kecil = pas erat."
+  };
 
-  en: {
-    title: "Top Silver 925",
-    tagline: "Custom Name • Rings • Bracelets • Pendants • Earings",
-    chatbtn: "Chat on WhatsApp",
-    about: "About Us",
-    aboutdesc: "Top Silver 925 is a pure sterling silver jewelry craftsman with premium quality and detailed finishing.",
-    p1: "Custom name or design available",
-    p2: "Real 925 sterling silver (not coated)",
-    p3: "Direct price from the craftsman",
-    p4: "Clean finishing and precise workmanship",
-    gallery: "Product Gallery",
-    gallerydesc: "Collection of our handcrafted silver jewelry",
-    adv: "Our Advantages",
-    a1: "Free design – send your photo to create",
-    a2: "Guaranteed genuine 925 silver",
-    a3: "Honest pricing with no middleman",
-    a4: "Finishing repair warranty",
-    footer: "Top Silver 925 • Bandung, west java"
-  }
-};
+  document.getElementById("popup-text").innerText = text[type];
+  document.getElementById("popup").style.display = "flex";
+}
 
-function setLanguage(lang) {
-  document.querySelectorAll("[data-lang]").forEach(el => {
-    el.innerText = langText[lang][el.getAttribute("data-lang")];
-  });
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
 }
 </script>
 
