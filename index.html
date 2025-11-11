@@ -6,7 +6,7 @@
 <title>Top Silver 925</title>
 
 <style>
-    .language-switch {
+.language-switch {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -25,7 +25,8 @@
 .language-switch button:hover {
   background: #eee;
 }
-    .gallery {
+
+.gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 16px;
@@ -41,120 +42,130 @@
   border-radius: 12px;
   background: #f1f1f1;
 }
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: #ffffff;
-        color: #222;
-        text-align: center;
-    }
 
-    header {
-        background: #ffffff;
-        padding: 25px 10px;
-    }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #222;
+  text-align: center;
+}
 
-    header img {
-        max-width: 130px;
-    }
+header {
+  background: #ffffff;
+  padding: 25px 10px;
+}
 
-    h1 {
-        margin: 10px 0 5px;
-        font-size: 26px;
-        font-weight: bold;
-    }
-
-    p {
-        margin: 5px 0;
-    }
-
-    section {
-        padding: 35px 15px;
-    }
-
-    /* === GALERI VIDEO === */
-    .gallery {
-        display: flex;
-        flex-wrap: wrap;         /* Biar responsif */
-        justify-content: center; /* Tengah */
-        gap: 15px;               /* Jarak antar video */
-        margin-top: 15px;
-    }
-
-    .gallery video {
-        width: 100%;
-        max-width: 260px;        /* Ukuran video */
-        border-radius: 12px;
-        box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
-    }
-
+header img {
+  max-width: 130px;
+}
 </style>
 </head>
 <body>
 
 <header>
-    <header>
-  <h1>Top Silver 925</h1>
-
   <div class="language-switch">
-    <button onclick="setLanguage('id')">indonesia</button>
-    <button onclick="setLanguage('en')">english</button>
+    <button onclick="setLanguage('id')">🇮🇩</button>
+    <button onclick="setLanguage('en')">🇺🇸</button>
   </div>
-</header>
-    <img src="site.png" alt="Top Silver Logo">
-    <h1>Top Silver 925</h1>
-    <p>Custom Nama • Cincin • Gelang • Liontin</p>
-    <a href="https://wa.me/628132022201?t=Halo%2C%20saya%20ingin%20pesan%20custom%20perhiasan" 
-       style="display:inline-block;margin-top:10px;padding:10px 18px;background:black;color:white;border-radius:6px;text-decoration:none;">
+
+  <img src="site.png" alt="Top Silver Logo">
+  <h1 data-lang="title">Top Silver 925</h1>
+  <p data-lang="tagline">Custom Nama • Cincin • Gelang • Liontin</p>
+
+  <a data-lang="chatbtn" href="https://wa.me/628132022201?t=Halo%2C%20saya%20ingin%20pesan%20custom%20perhiasan" 
+     style="display:inline-block;margin-top:10px;padding:10px 18px;background:black;color:white;border-radius:6px;text-decoration:none;">
         Chat WhatsApp
-    </a>
+  </a>
 </header>
 
 <section>
-    <h2>Tentang Kami</h2>
-    <p>Top Silver 925 adalah pengrajin perhiasan perak murni dengan kualitas premium dan pengerjaan detail rapi.</p>
+  <h2 data-lang="about">Tentang Kami</h2>
+  <p data-lang="aboutdesc">Top Silver 925 adalah pengrajin perhiasan perak murni dengan kualitas premium dan pengerjaan detail rapi.</p>
 
-    <ul style="text-align:left;max-width:600px;margin:auto;line-height:1.6;">
-        <li>Bisa custom nama / model sesuai keinginan</li>
-        <li>Bahan perak asli 925 (bukan lapisan)</li>
-        <li>Harga langsung pengrajin</li>
-        <li>Pengerjaan rapi & finishing halus</li>
-    </ul>
+  <ul style="text-align:left;max-width:600px;margin:auto;line-height:1.6;">
+      <li data-lang="p1">Bisa custom nama / model sesuai keinginan</li>
+      <li data-lang="p2">Bahan perak asli 925 (bukan lapisan)</li>
+      <li data-lang="p3">Harga langsung pengrajin</li>
+      <li data-lang="p4">Pengerjaan rapi & finishing halus</li>
+  </ul>
 </section>
 
 <section>
-    <h2>Galeri Produk</h2>
-    <p>Koleksi hasil pengerjaan Top Silver 925</p>
+  <h2 data-lang="gallery">Galeri Produk</h2>
+  <p data-lang="gallerydesc">Koleksi hasil pengerjaan Top Silver 925</p>
 
-    <div class="gallery">
-        <video controls autoplay loop muted>
-            <source src="video1.mp4" type="video/mp4">
-        </video>
-
-        <video controls autoplay loop muted>
-            <source src="video2.mp4" type="video/mp4">
-        </video>
-
-        <video controls autoplay loop muted>
-            <source src="video3.mp4" type="video/mp4">
-        </video>
-    </div>
+  <div class="gallery">
+      <video controls autoplay loop muted><source src="video1.mp4" type="video/mp4"></video>
+      <video controls autoplay loop muted><source src="video2.mp4" type="video/mp4"></video>
+      <video controls autoplay loop muted><source src="video3.mp4" type="video/mp4"></video>
+  </div>
 </section>
 
 <section>
-    <h2>Keunggulan Kami</h2>
-    <ul style="text-align:left;max-width:600px;margin:auto;line-height:1.6;">
-        <li>Desain bebas – kirim foto bisa dibuat</li>
-        <li>Perak dijamin asli 925</li>
-        <li>Harga jujur tanpa perantara</li>
-        <li>Garansi perbaikan finishing</li>
-    </ul>
+  <h2 data-lang="adv">Keunggulan Kami</h2>
+  <ul style="text-align:left;max-width:600px;margin:auto;line-height:1.6;">
+      <li data-lang="a1">Desain bebas – kirim foto bisa dibuat</li>
+      <li data-lang="a2">Perak dijamin asli 925</li>
+      <li data-lang="a3">Harga jujur tanpa perantara</li>
+      <li data-lang="a4">Garansi perbaikan finishing</li>
+  </ul>
 </section>
 
 <footer style="padding:20px;background:#f1f1f1;margin-top:35px;">
-    <p>Top Silver 925 • Pengrajin Perhiasan Custom</p>
+  <p data-lang="footer">Top Silver 925 • Pengrajin Perhiasan Custom</p>
 </footer>
+
+<script>
+const langText = {
+  id: {
+    title: "Top Silver 925",
+    tagline: "Custom Nama • Cincin • Gelang • Liontin",
+    chatbtn: "Chat WhatsApp",
+    about: "Tentang Kami",
+    aboutdesc: "Top Silver 925 adalah pengrajin perhiasan perak murni dengan kualitas premium dan pengerjaan detail rapi.",
+    p1: "Bisa custom nama / model sesuai keinginan",
+    p2: "Bahan perak asli 925 (bukan lapisan)",
+    p3: "Harga langsung pengrajin",
+    p4: "Pengerjaan rapi & finishing halus",
+    gallery: "Galeri Produk",
+    gallerydesc: "Koleksi hasil pengerjaan Top Silver 925",
+    adv: "Keunggulan Kami",
+    a1: "Desain bebas – kirim foto bisa dibuat",
+    a2: "Perak dijamin asli 925",
+    a3: "Harga jujur tanpa perantara",
+    a4: "Garansi perbaikan finishing",
+    footer: "Top Silver 925 • Pengrajin Perhiasan Custom"
+  },
+
+  en: {
+    title: "Top Silver 925",
+    tagline: "Custom Name • Rings • Bracelets • Pendants",
+    chatbtn: "Chat on WhatsApp",
+    about: "About Us",
+    aboutdesc: "Top Silver 925 is a pure sterling silver jewelry craftsman with premium quality and detailed finishing.",
+    p1: "Custom name or design available",
+    p2: "Real 925 sterling silver (not coated)",
+    p3: "Direct price from the craftsman",
+    p4: "Clean finishing and precise workmanship",
+    gallery: "Product Gallery",
+    gallerydesc: "Collection of our handcrafted silver jewelry",
+    adv: "Our Advantages",
+    a1: "Free design – send your photo to create",
+    a2: "Guaranteed genuine 925 silver",
+    a3: "Honest pricing with no middleman",
+    a4: "Finishing repair warranty",
+    footer: "Top Silver 925 • Custom Jewelry Craftsman"
+  }
+};
+
+function setLanguage(lang) {
+  document.querySelectorAll("[data-lang]").forEach(el => {
+    el.innerText = langText[lang][el.getAttribute("data-lang")];
+  });
+}
+</script>
 
 </body>
 </html>
