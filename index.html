@@ -1,248 +1,117 @@
 <!DOCTYPE html>
 <html lang="id">
-  .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 16px;
-  justify-items: center;
-  align-items: center;
-  padding: 10px 0;
-}
-
-.gallery video {
-  width: 170px;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 12px;
-  background: #f1f1f1;
-}
 <head>
-  ...
-</head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Top Silver 925</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Silver 925</title>
 
-  <style>
+<style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #ffffff;
-      color: #333;
-      text-align: center;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        color: #222;
+        text-align: center;
     }
 
     header {
-      padding: 20px;
-      position: relative;
+        background: #ffffff;
+        padding: 25px 10px;
     }
 
     header img {
-      width: 140px;
-      display: block;
-      margin: 0 auto;
+        max-width: 130px;
     }
 
-    .lang-switch {
-      position: absolute;
-      right: 15px;
-      top: 15px;
-      display: flex;
-      gap: 8px;
+    h1 {
+        margin: 10px 0 5px;
+        font-size: 26px;
+        font-weight: bold;
     }
 
-    .lang-switch img {
-      width: 35px;
-      padding: 6px;
-      background: #eee;
-      border-radius: 6px;
-      cursor: pointer;
+    p {
+        margin: 5px 0;
     }
 
     section {
-      padding: 30px 20px;
-      max-width: 800px;
-      margin: auto;
+        padding: 35px 15px;
     }
 
-    .button-wa {
-      display: inline-block;
-      background: black;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 8px;
-      margin-top: 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
+    /* === GALERI VIDEO === */
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;         /* Biar responsif */
+        justify-content: center; /* Tengah */
+        gap: 15px;               /* Jarak antar video */
+        margin-top: 15px;
     }
 
-    .gallery div {
-      background: #eee;
-      padding: 45px 0;
-      border-radius: 12px;
-      font-size: 16px;
-      color: #555;
+    .gallery video {
+        width: 100%;
+        max-width: 260px;        /* Ukuran video */
+        border-radius: 12px;
+        box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
     }
 
-    /* Floating AI Help */
-    #ai-help-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #111;
-      color: #fff;
-      border-radius: 50px;
-      padding: 12px 18px;
-      font-size: 15px;
-      cursor: pointer;
-      z-index: 9999;
-    }
-
-    #ai-help-box {
-      position: fixed;
-      bottom: 80px;
-      right: 20px;
-      width: 260px;
-      background: #ffffff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.25);
-      text-align: left;
-      display: none;
-      z-index: 9999;
-    }
-
-    #ai-help-box button {
-      width: 100%;
-      margin-top: 8px;
-      padding: 8px;
-      background: #111;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-  </style>
+</style>
 </head>
-
 <body>
 
 <header>
-  <div class="lang-switch">
-    <img src="https://flagcdn.com/w20/id.png" id="id-btn">
-    <img src="https://flagcdn.com/w20/us.png" id="en-btn">
-  </div>
-
-  <img src="site.png" alt="">
-  <h1 id="title">Top Silver 925</h1>
-  <p id="subtitle">Custom Nama • Cincin Tunangan • Kalung • Gelang • Handmade Artisan</p>
-  <a href="https://wa.me/628132022201?text=Halo%20Top%20Silver%20925" class="button-wa" id="chatbtn">Chat via WhatsApp</a>
+    <img src="site.png" alt="Top Silver Logo">
+    <h1>Top Silver 925</h1>
+    <p>Custom Nama • Cincin • Gelang • Liontin</p>
+    <a href="https://wa.me/628132022201?t=Halo%2C%20saya%20ingin%20pesan%20custom%20perhiasan" 
+       style="display:inline-block;margin-top:10px;padding:10px 18px;background:black;color:white;border-radius:6px;text-decoration:none;">
+        Chat WhatsApp
+    </a>
 </header>
 
 <section>
-  <h2 id="about-title">Tentang Kami</h2>
-  <p id="about-desc">
-    Top Silver 925 adalah pengrajin perhiasan perak asli... Kami menerima pembuatan desain sesuai permintaan...
-  </p>
-  <ul style="text-align:left; max-width:600px; margin:auto;">
-    <li id="point1">Bisa custom nama / logo / desain bebas</li>
-    <li id="point2">Bahan perak asli 925 (sterling silver)</li>
-    <li id="point3">Harga langsung pengrajin</li>
-    <li id="point4">Pengerjaan rapi handmade dan presisi</li>
-  </ul>
+    <h2>Tentang Kami</h2>
+    <p>Top Silver 925 adalah pengrajin perhiasan perak murni dengan kualitas premium dan pengerjaan detail rapi.</p>
 
-
-  <section>
-  <h2 id="gallery-title">Galeri Produk</h2>
-  <p id="gallery-desc">Koleksi perhiasan Top Silver 925.</p>
-
-  <div class="gallery">
-    <video controls autoplay loop muted playsinline>
-      <source src="video1.mp4" type="video/mp4">
-    </video>
-
-    <video controls autoplay loop muted playsinline>
-      <source src="video2.mp4" type="video/mp4">
-    </video>
-
-    <video controls autoplay loop muted playsinline>
-      <source src="Video3.mp4" type="video/mp4">
-    </video>
-  </div>
-</section>
-  <h2 id="keunggulan-title">Keunggulan</h2>
-  <ul style="text-align:left; max-width:600px; margin:auto;">
-    <li id="adv1">Perak 925 asli</li>
-    <li id="adv2">Ukiran detail & halus</li>
-    <li id="adv3">Bisa request ukuran & model</li>
-  </ul>
+    <ul style="text-align:left;max-width:600px;margin:auto;line-height:1.6;">
+        <li>Bisa custom nama / model sesuai keinginan</li>
+        <li>Bahan perak asli 925 (bukan lapisan)</li>
+        <li>Harga langsung pengrajin</li>
+        <li>Pengerjaan rapi & finishing halus</li>
+    </ul>
 </section>
 
-<!-- Floating AI -->
-<div id="ai-help-btn">Panduan 📌</div>
+<section>
+    <h2>Galeri Produk</h2>
+    <p>Koleksi hasil pengerjaan Top Silver 925</p>
 
-<div id="ai-help-box">
-  <h4>Panduan Ukuran & Pengiriman</h4>
-  <button onclick="window.open('https://www.google.com/search?q=cara+ukur+diameter+cincin','_blank')">Cara Ukur Cincin</button>
-  <button onclick="window.open('https://www.google.com/search?q=cara+ukur+diameter+gelang','_blank')">Cara Ukur Gelang</button>
-  <button onclick="window.open('https://www.google.com/search?q=cara+ukur+anting','_blank')">Cara Ukur Anting</button>
-  <button onclick="window.open('https://cek-ongkir.com','_blank')">Cek Ongkir</button>
-</div>
+    <div class="gallery">
+        <video controls autoplay loop muted>
+            <source src="video1.mp4" type="video/mp4">
+        </video>
 
-<script>
-document.getElementById("ai-help-btn").onclick = function() {
-  const box = document.getElementById("ai-help-box");
-  box.style.display = box.style.display === "block" ? "none" : "block";
-};
+        <video controls autoplay loop muted>
+            <source src="video2.mp4" type="video/mp4">
+        </video>
 
-document.getElementById("en-btn").onclick = function() {
-  document.getElementById("title").innerText = "Top Silver 925";
-  document.getElementById("subtitle").innerText = "Custom Name • Engagement Rings • Necklaces • Bracelets • Handmade Artisan";
-  document.getElementById("chatbtn").innerText = "Chat via WhatsApp";
-  document.getElementById("about-title").innerText = "About Us";
-  document.getElementById("about-desc").innerText = "Top Silver 925 is a handmade silver jewelry craftsman...";
-  document.getElementById("point1").innerText = "Can custom name / logo / design";
-  document.getElementById("point2").innerText = "Material: Original 925 Sterling Silver";
-  document.getElementById("point3").innerText = "Direct artisan price";
-  document.getElementById("point4").innerText = "Handcrafted with precision";
-  document.getElementById("gallery-title").innerText = "Product Gallery";
-  document.getElementById("gallery-desc").innerText = "Upload product photos manually later.";
-  document.getElementById("keunggulan-title").innerText = "Advantages";
-  document.getElementById("adv1").innerText = "Original 925 Silver";
-  document.getElementById("adv2").innerText = "Detailed & smooth engraving";
-  document.getElementById("adv3").innerText = "Custom size & model";
-};
+        <video controls autoplay loop muted>
+            <source src="video3.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
 
-document.getElementById("id-btn").onclick = function() {
-  location.reload();
-};
-</script>
-<style>
-.gallery {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)) !important;
-  gap: 16px !important;
-  justify-items: center !important;
-  align-items: center !important;
-  padding: 10px 0 !important;
-}
+<section>
+    <h2>Keunggulan Kami</h2>
+    <ul style="text-align:left;max-width:600px;margin:auto;line-height:1.6;">
+        <li>Desain bebas – kirim foto bisa dibuat</li>
+        <li>Perak dijamin asli 925</li>
+        <li>Harga jujur tanpa perantara</li>
+        <li>Garansi perbaikan finishing</li>
+    </ul>
+</section>
 
-.gallery video {
-  width: 170px !important;
-  height: 170px !important;
-  object-fit: cover !important;
-  border-radius: 12px !important;
-  background: #f1f1f1 !important;
-}
-</style>
+<footer style="padding:20px;background:#f1f1f1;margin-top:35px;">
+    <p>Top Silver 925 • Pengrajin Perhiasan Custom</p>
+</footer>
+
 </body>
 </html>
