@@ -1,4 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Silver 925 | Tren Perhiasan 925</title>
 
+  <!-- SEO -->
+  <meta name="description" content="Top Silver 925 - Pengrajin perhiasan perak handmade berkualitas tinggi. Cincin, gelang, anting, dan liontin elegan & modern.">
+  <meta name="keywords" content="Top Silver 925, Tren Perhiasan 925, perhiasan perak, cincin, gelang, anting, liontin, handmade, silver jewelry">
+  <meta name="author" content="Top Silver 925">
+  <meta property="og:image" content="https://trenperhiasan.github.io/topsilver925/banner.jpg">
+  <meta property="og:url" content="https://trenperhiasan.github.io/topsilver925/">
+
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #222;
+      text-align: center;
+    }
+
+    header {
+      background: #fff;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      position: relative;
+    }
+
+    header img {
+      max-width: 100%;
+      border-radius: 0;
+    }
+
+    .language-switch {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+    }
+
+    .language-switch button {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 5px 8px;
+      cursor: pointer;
+      font-size: 10px;
+      margin-left: 3px;
+    }
+
+    .language-switch button:hover {
+      background: #eee;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .gallery video {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      background: #f3f3f3;
+    }
+
+    footer {
+      padding: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 8px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: black;
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .btn:hover {
+      background: #444;
+    }
+
+    /* Panduan Ukuran Popup */
+    #guide-popup {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #guide-box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      width: 320px;
+      text-align: left;
+      position: relative;
+    }
+
+    #guide-close {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    #guide-box h3 {
+      text-align: center;
+    }
+
+    #guide-box p {
+      font-size: 14px;
+      margin: 6px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner -->
+  <header>
+    <img src="banner.jpg" alt="Banner Top Silver 925">
+    <div class="language-switch">
+      <button onclick="setLanguage('id')">ID</button>
+      <button onclick="setLanguage('en')">EN</button>
+    </div>
+  </header>
+
+  <!-- Video Galeri -->
+  <section class="gallery">
+    <video src="video1.mp4" autoplay loop muted playsinline></video>
+    <video src="video2.mp4" autoplay loop muted playsinline></video>
+    <video src="Video4.mp4" autoplay loop muted playsinline></video>
+    <video src="Video5.mp4" autoplay loop muted playsinline></video>
+  </section>
+
+  <!-- Tombol -->
+  <footer>
+    <a href="#" class="btn" onclick="openGuide()">Panduan Ukuran</a>
+    <a href="https://wa.me/628132022201" target="_blank" class="btn">Chat WhatsApp</a>
+  </footer>
+
+  <!-- Popup Panduan Ukuran -->
+  <div id="guide-popup">
+    <div id="guide-box">
+      <span id="guide-close" onclick="closeGuide()">&times;</span>
+      <h3>Panduan Ukuran</h3>
+      <p><strong>Cincin:</strong> pakai kawat/tembaga, lingkarkan di jari atau cincin lama, lalu ukur diameter dengan penggaris.</p>
+      <p><strong>Gelang:</strong> pakai kawat/tembaga, lingkarkan di pergelangan tangan, ukur diameter kanan ke kiri, atas ke bawah.</p>
+      <p><strong>Anting:</strong> samakan ukuran dengan gelang.</p>
+      <p><strong>Liontin:</strong> samakan ukuran dengan gelang.</p>
+      <p><strong>Kalung:</strong> pakai kawat/tembaga, ukur panjang dengan penggaris.</p>
+    </div>
+  </div>
+
+  <script>
+    function openGuide() {
+      document.getElementById('guide-popup').style.display = 'flex';
+    }
+    function closeGuide() {
+      document.getElementById('guide-popup').style.display = 'none';
+    }
+    function setLanguage(lang) {
+      alert(lang === 'id' ? 'Bahasa Indonesia aktif' : 'English language active');
+    }
+  </script>
+
+</body>
+</html>
   
   
     
