@@ -1,143 +1,339 @@
+
+
 <!DOCTYPE html>
+
 <html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Top Silver 925</title>
+
+
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  color: #333;
-  text-align: center;
-}
-.banner {
-  position: relative;
-}
-.banner img {
-  width: 100%;
-  display: block;
-}
-.banner-buttons {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  display: flex;
-  gap: 10px;
-}
+
 .language-switch {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  display: flex;
-  gap: 8px;
+
+  position: absolute;
+
+  top: 20px;
+
+  right: 20px;
+
 }
-button, .link-btn {
-  background-color: rgba(255,255,255,0.8);
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 5px 10px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background 0.3s;
+
+
+.language-switch button {
+
+  background: white;
+
+  border: 1px solid #ccc;
+
+  border-radius: 6px;
+
+  padding: 6px 8px;
+
+  cursor: pointer;
+
+  font-size: 8px;
+
+  margin-left: 4px;
+
 }
-button:hover, .link-btn:hover {
-  background-color: #eee;
+
+
+.language-switch button:hover {
+
+  background: #eee;
+
 }
-.logo {
-  display: block;
-  margin: 15px auto;
-  max-width: 120px;
-}
+
+
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 10px;
-  padding: 10px;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+
+  gap: 16px;
+
+  justify-items: center;
+
+  align-items: center;
+
+  padding: 10px 0;
+
 }
+
+
 .gallery video {
-  width: 100%;
-  border-radius: 10px;
+
+  width: 170px;
+
+  height: 170px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  background: #f1f1f1;
+
 }
-.measurement {
-  margin: 20px auto;
-  max-width: 600px;
-  text-align: left;
-  padding: 10px;
+
+
+body {
+
+  font-family: Arial, sans-serif;
+
+  margin: 0;
+
+  padding: 0;
+
+  background: #ffffff;
+
+  color: #222;
+
+  text-align: center;
+
 }
-.measurement button {
-  margin-top: 10px;
+
+
+header {
+
+  background: #ffffff;
+
+  padding: 25px 10px;
+
 }
+
+
+header img {
+
+  max-width: 130px;
+
+}
+
 </style>
+
 </head>
+
 <body>
 
-<!-- Banner -->
-<section class="banner">
-  <img src="banner.jpg" alt="Banner Top Silver 925">
-  <div class="banner-buttons">
-    <a href="https://cekresi.com" target="_blank" class="link-btn">📦 Paket Dalam Negeri</a>
-    <a href="https://parcelsapp.com/id" target="_blank" class="link-btn">🌍 Paket Luar Negeri</a>
-  </div>
-  <div class="language-switch">
-    <button onclick="setLanguage('id')">ID</button>
-    <button onclick="setLanguage('en')">EN</button>
-  </div>
+
+<header>
+
+  <div class="language-switch">
+
+    <button onclick="setLanguage('id')">indonesia</button>
+
+    <button onclick="setLanguage('en')">english</button>
+
+  </div>
+
+
+  <img src="site.png" alt="Top Silver Logo">
+
+  <h1 data-lang="title">Top Silver 925</h1>
+
+  <p data-lang="tagline">Custom Nama • Cincin • Gelang • Liontin • Anting</p>
+
+
+  <a data-lang="chatbtn" href="https://wa.me/628132022201?t=Halo%2C%20saya%20ingin%20pesan%20custom%20perhiasan" 
+
+     style="display:inline-block;margin-top:10px;padding:10px 18px;background:black;color:white;border-radius:6px;text-decoration:none;">
+
+        Chat WhatsApp
+
+  </a>
+
+</header>
+
+
+<section>
+
+  <h2 data-lang="about">Tentang Kami</h2>
+
+  <p data-lang="aboutdesc">Top Silver 925 adalah pengrajin perhiasan perak murni dengan kualitas premium dan pengerjaan detail rapi.</p>
+
+
+  <ul style="text-align:left;max-width:600px;margin:auto;line-height:1.6;">
+
+      <li data-lang="p1">Bisa custom nama / model sesuai keinginan</li>
+
+      <li data-lang="p2">Bahan perak asli 925 (bukan lapisan)</li>
+
+      <li data-lang="p3">Harga langsung pengrajin</li>
+
+      <li data-lang="p4">Pengerjaan rapi & finishing halus</li>
+
+  </ul>
+
 </section>
 
-<!-- Logo -->
-<img src="site.png" alt="Top Silver Logo" class="logo">
 
-<!-- Video Gallery -->
-<section class="gallery">
-  <video src="video1.mp4" autoplay loop muted playsinline></video>
-  <video src="video2.mp4" autoplay loop muted playsinline></video>
-  <video src="Video4.mp4" autoplay loop muted playsinline></video>
-  <video src="Video5.mp4" autoplay loop muted playsinline></video>
+<!-- GALERI PRODUK -->
+
+<section>
+
+  <h2 data-lang="gallery">Galeri Produk</h2>
+
+  <div class="gallery">
+
+      <video autoplay loop muted playsinline>
+
+        <source src="assets/Video5.mp4" type="video/mp4">
+
+      </video>
+
+      <video autoplay loop muted playsinline>
+
+        <source src="assets/video1.mp4" type="video/mp4">
+
+      </video>
+
+      <video autoplay loop muted playsinline>
+
+        <source src="assets/video2.mp4" type="video/mp4">
+
+      </video>
+
+  </div>
+
 </section>
 
-<!-- Pengukuran -->
-<section class="measurement">
-  <h3>Pengukuran Perhiasan</h3>
-  <p><b>Cincin:</b> Pakai kawat/tembaga, lingkarkan di jari atau cincin lama, lalu ukur diameter dengan penggaris.</p>
-  <button>Ukur Cincin</button>
-  <p><b>Gelang:</b> Pakai kawat/tembaga, lingkarkan pergelangan, ukur diameter kanan ke kiri dan atas ke bawah.</p>
-  <button>Ukur Gelang</button>
-  <p><b>Anting & Liontin:</b> Samakan dengan ukuran gelang.</p>
-  <button>Ukur Anting/Liontin</button>
-  <p><b>Kalung:</b> Pakai kawat/tembaga ukur panjang keseluruhan dengan penggaris.</p>
-  <button>Ukur Kalung</button>
+
+<section>
+
+  <h2 data-lang="adv">Keunggulan Kami</h2>
+
+  <ul style="text-align:left;max-width:600px;margin:auto;line-height:1.6;">
+
+      <li data-lang="a1">Desain bebas – kirim foto bisa dibuat</li>
+
+      <li data-lang="a2">Perak dijamin asli 925</li>
+
+      <li data-lang="a3">Harga langsung tanpa perantara</li>
+
+      <li data-lang="a4">Garansi perbaikan finishing</li>
+
+  </ul>
+
 </section>
+
+
+<footer style="padding:20px;background:#f1f1f1;margin-top:35px;">
+
+  <p data-lang="footer">Top Silver 925 • Pengrajin Perhiasan Custom</p>
+
+</footer>
+
 
 <script>
+
+const langText = {
+
+  id: {
+
+    title: "Top Silver 925",
+
+    tagline: "Custom Nama • Cincin • Gelang • Liontin • Anting",
+
+    chatbtn: "Chat WhatsApp & konsultasi design",
+
+    about: "Tentang Kami",
+
+    aboutdesc: "Top Silver 925 adalah pengrajin perhiasan perak murni dengan kualitas premium dan pengerjaan detail rapi.",
+
+    p1: "Bisa custom nama / model sesuai keinginan",
+
+    p2: "Bahan perak asli 925 (bukan lapisan)",
+
+    p3: "Harga langsung pengrajin",
+
+    p4: "Pengerjaan rapi & finishing halus",
+
+    gallery: "Galeri Produk",
+
+    adv: "Keunggulan Kami",
+
+    a1: "Desain bebas – kirim foto bisa dibuat",
+
+    a2: "Perak dijamin asli 925",
+
+    a3: "Harga tanpa perantara",
+
+    a4: "Garansi perbaikan finishing",
+
+    footer: "Top Silver 925, Bandung, Jawa Barat"
+
+  },
+
+  en: {
+
+    title: "Top Silver 925",
+
+    tagline: "Custom Name • Rings • Bracelets • Pendants • Earrings",
+
+    chatbtn: "Chat on WhatsApp",
+
+    about: "About Us",
+
+    aboutdesc: "Top Silver 925 is a pure sterling silver jewelry craftsman with premium quality and detailed finishing.",
+
+    p1: "Custom name or design available",
+
+    p2: "Real 925 sterling silver (not coated)",
+
+    p3: "Direct price from the craftsman",
+
+    p4: "Clean finishing and precise workmanship",
+
+    gallery: "Product Gallery",
+
+    adv: "Our Advantages",
+
+    a1: "Free design – send your photo to create",
+
+    a2: "Guaranteed genuine 925 silver",
+
+    a3: "Honest pricing with no middleman",
+
+    a4: "Finishing repair warranty",
+
+    footer: "Top Silver 925 • Bandung, West Java"
+
+  }
+
+};
+
+
+let currentLang = 'id';
+
 function setLanguage(lang) {
-  document.documentElement.lang = lang;
-  if (lang === 'id') {
-    alert('Bahasa Indonesia aktif');
-  } else {
-    alert('English language active');
-  }
+
+  currentLang = lang;
+
+  document.querySelectorAll("[data-lang]").forEach(el => {
+
+    if (langText[lang][el.getAttribute("data-lang")]) {
+
+      el.innerText = langText[lang][el.getAttribute("data-lang")];
+
+    }
+
+  });
+
 }
+
 </script>
 
+
 </body>
-</html>    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+<html/>    
     
     
     
