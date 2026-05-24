@@ -321,28 +321,58 @@
 </style>
 
 <script>
-const content = {
-  id: {
-    title: "Top Silver 925 - Perhiasan Perak Handmade",
-    description: "Perhiasan perak murni berkualitas tinggi dari pengrajin profesional di Indonesia.",
-    measure: "Panduan Ukur",
-    ring: "Ukur Cincin: pakai kawat/tembaga lingkarkan di jari lalu ukur diameter dengan penggaris.",
-    bracelet: "Ukur Gelang: pakai kawat/tembaga lingkarkan dan ukur diameter kanan-kiri, atas-bawah.",
-    earring: "Ukur Anting: disamakan dengan ukuran gelang.",
-    pendant: "Ukur Liontin: disamakan dengan ukuran gelang.",
-    necklace: "Ukur Kalung: pakai kawat/tembaga ukur panjang dengan penggaris."
-  },
-  en: {
-    title: "Top Silver 925 - Handmade Silver Jewelry",
-    description: "High-quality pure silver jewelry crafted by professional artisans in Indonesia.",
-    measure: "Measurement Guide",
-    ring: "Ring: use copper wire, wrap around your finger, measure diameter with a ruler.",
-    bracelet: "Bracelet: use wire, wrap around wrist, measure diameter horizontally and vertically.",
-    earring: "Earrings: same as bracelet measurement.",
-    pendant: "Pendant: same as bracelet measurement.",
-    necklace: "Necklace: use wire, measure total length with a ruler."
-  }
-};
+function switchLang(lang) {
+
+  document.title =
+  content[lang].title;
+
+  document.querySelector(
+  'meta[name="description"]'
+  ).setAttribute(
+  'content',
+  content[lang].description
+  );
+
+  document.getElementById(
+  'main-title'
+  ).innerText =
+  content[lang].title;
+
+  document.getElementById(
+  'tagline'
+  ).innerText =
+  content[lang].tagline;
+
+  document.getElementById(
+  'about-title'
+  ).innerText =
+  content[lang].about;
+
+  document.getElementById(
+  'about-desc'
+  ).innerText =
+  content[lang].aboutdesc;
+
+  document.getElementById(
+  'gallery-title'
+  ).innerText =
+  content[lang].gallery;
+
+  document.getElementById(
+  'measure-title'
+  ).innerText =
+  content[lang].measure;
+
+  document.querySelectorAll(
+  '.lang-btn'
+  ).forEach(
+  b => b.classList.remove('active')
+  );
+
+  document.getElementById(
+  `lang-${lang}`
+  ).classList.add('active');
+}
 
 const idBtn = document.getElementById('lang-id');
 const enBtn = document.getElementById('lang-en');
