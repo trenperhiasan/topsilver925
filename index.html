@@ -386,12 +386,7 @@ function switchLang(lang) {
 
   // Ubah teks panduan ukur
   document.getElementById('measure-title').innerText = content[lang].measure;
-  document.getElementById('ring-text').innerText = content[lang].ring;
-  document.getElementById('bracelet-text').innerText = content[lang].bracelet;
-  document.getElementById('earring-text').innerText = content[lang].earring;
-  document.getElementById('pendant-text').innerText = content[lang].pendant;
-  document.getElementById('necklace-text').innerText = content[lang].necklace;
-
+  
   // Ubah tombol aktif
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
   document.getElementById(`lang-${lang}`).classList.add('active');
